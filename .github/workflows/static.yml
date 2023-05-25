@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <title>Моя галерея</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1 style="text-align: center;">Моя галерея</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Головна</a></li>
+          <li>
+            <div class="dropdown">
+              <a href="#"><p>Категорії</p></a>
+              <div class="dropdown-content">
+                <a href="Picture.html">Малюнки</a>
+                <a href="Butter.html">Олія</a>
+                <a href="Painting.html">Живопис</a>
+                <a href="Graphics.html">Графіка</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="About_me.html">Про мене</a></li>
+          <li style="float:right;">
+            <button onclick="changeLanguage();">
+              <img src="images/united-kingdom-flag.png" alt="EN">
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <section id="showcase">
+    <div class="container">
+      <h1 style="font-family: 'Roboto', sans-serif;">Рада вас бачити на сайті своєї галереї</h1>
+      <p style="font-family: 'Roboto', sans-serif;">Тут ви побачите мої роботи та маю надію, що вони надихнуть вас.</p>
+    </div>
+  </section>
+
+  <section id="author">
+    <div class="container">
+      <div class="author-info">
+        <img src="images/i/msg661485168-91188.jpg" alt="Фото автора">
+        <div class="author-text">
+          <h1>Ангеліна Кибалюк</h1>
+          <p>Планую пов'язати життя з творчістю в різних його напрямках та розвивати свої навички.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <h2 style="font-family: 'Roboto', sans-serif;">Категорії</h2>
+      <ul>
+        <li>
+          <a href="Picture.html">
+            <p style="font-family: 'Roboto', sans-serif;">Рисунок</p>
+          </a>
+        </li>
+        <li>
+          <a href="Butter.html">
+            <p style="font-family: 'Roboto', sans-serif;">Масло</p>
+          </a>
+        </li>
+        <li>
+          <a href="Painting.html">
+            <p style="font-family: 'Roboto', sans-serif;">Живопис</p>
+          </a>
+        </li>
+        <li>
+          <a href="Graphics.html">
+            <p style="font-family: 'Roboto', sans-serif;">Графіка</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    function changeLanguage() {
+      var language = document.documentElement.lang || 'uk';
+
+      if (language === 'uk') {
+        // switch to English
+        document.documentElement.lang = 'en';
+
+        // Replace all Ukrainian text with English text
+        document.title = 'My Gallery';
+        document.querySelector('h1').textContent = 'My Gallery';
+        document.querySelector('a[href="home.html"]').textContent = 'Home';
+        document.querySelector('a[href="#"]').textContent = 'Categories';
+        document.querySelector('a[href="About_me.html"]').textContent = 'About me';
+        document.querySelector('a[href="Picture.html"] p').textContent = 'Drawings';
+        document.querySelector('a[href="Butter.html"] p').textContent = 'Oil Paintings';
+        document.querySelector('a[href="Painting.html"] p').textContent = 'Paintings';
+        document.querySelector('a[href="Graphics.html"] p').textContent = 'Graphics';
+        document.querySelector('#showcase h1').textContent = 'Welcome to my gallery website';
+        document.querySelector('#showcase p').textContent = "Here you'll find my work, and I hope it inspires you.";
+        document.querySelector('h2').textContent = 'Categories';
+        document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Drawings';
+        document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Oil Paintings';
+        document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Paintings';
+        document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Graphics';
+        document.querySelector('#author h1').textContent = 'Angelina Kybalyuk';
+        document.querySelector('#author p').textContent = "I plan to connect my life with creativity in various directions and develop my skills.";
+        document.querySelector('button img').src = 'images/united-kingdom-flag.png';
+        document.querySelector('button img').alt = 'EN';
+      } else {
+        // switch to Ukrainian
+        document.documentElement.lang = 'uk';
+
+        // Replace all English text with Ukrainian text
+        document.title = 'Моя галерея';
+        document.querySelector('h1').textContent = 'Моя Галерея';
+        document.querySelector('a[href="home.html"]').textContent = 'Головна';
+        document.querySelector('a[href="About_me.html"]').textContent = 'Про мене';
+        document.querySelector('a[href="#"]').textContent = 'Категорії';
+        document.querySelector('a[href="Picture.html"] p').textContent = 'Малюнки';
+        document.querySelector('a[href="Butter.html"] p').textContent = 'Олія';
+        document.querySelector('a[href="Painting.html"] p').textContent = 'Живопис';
+        document.querySelector('a[href="Graphics.html"] p').textContent = 'Графіка';
+        document.querySelector('#showcase h1').textContent = 'Рада вас бачити на сайті своєї галереї';
+        document.querySelector('#showcase p').textContent = 'Тут ви побачите мої роботи та маю надію, що вони надихнуть вас.';
+        document.querySelector('h2').textContent = 'Категорії';
+        document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Рисунки';
+        document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Масло';
+        document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Живопис';
+        document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Графіка';
+        document.querySelector('#author h1').textContent = 'Ангеліна Кибалюк';
+        document.querySelector('#author p').textContent = "Планую пов'язати життя з творчістю в різних його напрямках та розвивати свої навички.";
+        document.querySelector('button img').src = 'images/ukraine-flag.png';
+        document.querySelector('button img').alt = 'UA';
+      }
+    }
+  </script>
+
+  <div class="spacer"></div>
+  <style>
+    .spacer {
+      height: 10px;
+      width: 100%;
+      background-color: transparent;
+    }
+  </style>
+
+</body>
+
+</html>
