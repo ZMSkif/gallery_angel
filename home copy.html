@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>My Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 style="text-align: center;">My Gallery</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#">Categories</a>
+                            <div class="dropdown-content">
+                                <a href="Picture.html">Drawing</a>
+                                <a href="Butter.html">Oil</a>
+                                <a href="Painting.html">Painting</a>
+                                <a href="Graphics.html">Graphics</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="About_me.html">About me</a></li>
+                    <li style="float:right;">
+                        <button onclick="changeLanguage();"><img src="images/ukraine-flag.png" alt="UA"></button>
+                    </li>
+                    <li style="float:right;">
+                        <button onclick="changeLanguage();"><img src="images/united-states-flag.png" alt="US"></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <section id="showcase">
+        <div class="container">
+            <h1 style="font-family: 'Roboto', sans-serif;">Welcome to my gallery website</h1>
+            <p style="font-family: 'Roboto', sans-serif;">Here you will see my works and I hope you get inspired by them
+            </p>
+        </div>
+    </section>
+
+    <section id="author">
+        <div class="container">
+            <div class="author-info">
+                <img src="images/i/msg661485168-91188.jpg" alt="Author photo">
+                <div class="author-text">
+                    <h1>Angelina Kybalyuk</h1>
+                    <p>I am a student. I am 19 years old. I plan to connect my life with creativity in various
+                        directions and develop my skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="container">
+            <h2 style="font-family: 'Roboto', sans-serif;">Categories</h2>
+            <ul>
+                <li>
+                    <a href="Picture.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Drawing</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Butter.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Oil</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Painting.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Painting</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Graphics.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Graphics</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+</body>
+<div class="spacer"></div>
+<script>
+    function changeLanguage() {
+        // change language logic here
+    }
+</script>
+<style>
+    .spacer {
+        height: 10px;
+        width: 100%;
+        background-color: transparent;
+    }
+</style>
+
+</html>

@@ -1,0 +1,187 @@
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: normal;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 20px; /* Добавленный отступ сверху */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #f5deb3;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background-color: #f5deb3;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d2b48c;
+        }
+
+        /* Showcase styles */
+        #showcase {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        #author {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #author img {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Categories styles */
+        #categories {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #categories h2 {
+            margin-bottom: 20px;
+        }
+
+        #categories ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        #categories li {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #categories a {
+            display: block;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #f5deb3;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #categories a:hover {
+            background-color: #d2b48c;
+        }
+
+        .spacer {
+            height: 10px;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        #about {
+            margin-top: 100px;
+            padding: 20px 0;
+            background-color: #ffff;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        /* Showcase styles */
+        #gallery {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        #gallery h2 {
+            margin-bottom: 20px;
+        }
+        
+        #gallery .row {
+            display: flex;
+            flex-direction: column; /* Изменено на вертикальное направление */
+            align-items: center; /* Выравнивание по центру */
+            margin-bottom: 20px;
+        }
+        
+        #gallery .col {
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        
+        #gallery img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        

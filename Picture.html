@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>Моя галерея</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  .spacer {
+    height: 10px;
+    width: 100%;
+    background-color: transparent;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1 style="text-align: center;">Моя галерея</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Головна</a></li>
+          <li class="dropdown">
+            <a href="#"><p>Категорії</p></a>
+            <div class="dropdown-content">
+              <a href="Picture.html">Малюнки</a>
+              <a href="Butter.html">Олія</a>
+              <a href="Painting.html">Живопис</a>
+              <a href="Graphics.html">Графіка</a>
+            </div>
+          </li>
+          <li><a href="About_me.html">Про мене</a></li>
+          <!-- Кнопка переключення мови -->
+          <li style="float:right;">
+            <button onclick="changeLanguage();">
+              <img src="images/ukraine-flag.png" alt="UA">
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Галерея моїх робіт</h2>
+      <div class="row">
+        <div class="col">
+          <img src="images/picture/msg661485168-91143.jpg" alt="Робот 1">
+        </div>
+        <div class="col">
+          <img src="images/picture/msg661485168-91144.jpg" alt="Робот 2">
+        </div>
+        <div class="col">
+          <img src="images/picture/msg661485168-91145.jpg" alt="Робот 3">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="images/picture/msg661485168-91146.jpg" alt="Робот 4">
+        </div>
+        <div class="col">
+          <img src="images/picture/msg661485168-91147.jpg" alt="Робот 5">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <h2 style="font-family: 'Roboto', sans-serif;">Категорії</h2>
+      <ul>
+        <li>
+          <a href="Picture.html">
+            <p style="font-family: 'Roboto', sans-serif;">Малюнки</p>
+          </a>
+        </li>
+        <li>
+          <a href="Butter.html">
+            <p style="font-family: 'Roboto', sans-serif;">Олія</p>
+          </a>
+        </li>
+        <li>
+          <a href="Painting.html">
+            <p style="font-family: 'Roboto', sans-serif;">Живопис</p>
+          </a>
+        </li>
+        <li>
+          <a href="Graphics.html">
+            <p style="font-family: 'Roboto', sans-serif;">Графіка</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+
+  <script>
+  function changeLanguage() {
+    var language = document.documentElement.lang || 'uk';
+
+    if (language === 'uk') {
+      document.documentElement.lang = 'en';
+      document.getElementsByTagName('title')[0].textContent = 'My Gallery';
+      document.querySelector('h1').textContent = 'My Gallery';
+      document.querySelector('a[href="home.html"]').textContent = 'Home';
+      document.querySelector('a[href="#"] p').textContent = 'Categories';
+      document.querySelector('a[href="About_me.html"]').textContent = 'About me';
+      document.querySelector('a[href="Picture.html"] p').textContent = 'Drawings';
+      document.querySelector('a[href="Butter.html"] p').textContent = 'Oil';
+      document.querySelector('a[href="Painting.html"] p').textContent = 'Paintings';
+      document.querySelector('a[href="Graphics.html"] p').textContent = 'Graphics';
+      document.querySelector('#gallery h2').textContent = 'My Works Gallery';
+      document.querySelector('#categories h2').textContent = 'Categories';
+      document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Drawings';
+      document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Oil';
+      document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Paintings';
+      document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Graphics';
+      document.querySelector('button img').src = 'images/united-kingdom-flag.png';
+      document.querySelector('button img').alt = 'UK';
+    } else {
+      document.documentElement.lang = 'uk';
+      document.getElementsByTagName('title')[0].textContent = 'Моя галерея';
+      document.querySelector('h1').textContent = 'Моя Галерея';
+      document.querySelector('a[href="home.html"]').textContent = 'Головна';
+      document.querySelector('a[href="About_me.html"]').textContent = 'Про мене';
+      document.querySelector('a[href="#"] p').textContent = 'Категорії';
+      document.querySelector('a[href="Picture.html"] p').textContent = 'Малюнки';
+      document.querySelector('a[href="Butter.html"] p').textContent = 'Олія';
+      document.querySelector('a[href="Painting.html"] p').textContent = 'Живопис';
+      document.querySelector('a[href="Graphics.html"] p').textContent = 'Графіка';
+      document.querySelector('#gallery h2').textContent = 'Галерея моїх робіт';
+      document.querySelector('#categories h2').textContent = 'Категорії';
+      document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Малюнки';
+      document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Олія';
+      document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Живопис';
+      document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Графіка';
+      document.querySelector('button img').src = 'images/ukraine-flag.png';
+      document.querySelector('button img').alt = 'UA';
+    }
+  }
+  </script>
+</body>
+</html>

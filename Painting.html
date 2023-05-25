@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя галерея</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 style="text-align: center;" id="title-header">Моя галерея</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html" id="home-link">Головна</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" id="categories-link"><p>Категорії</p></a>
+                            <div class="dropdown-content">
+                                <a href="Picture.html" id="drawings-link">Малюнки</a>
+                                <a href="Butter.html" id="oil-link">Олія</a>
+                                <a href="Painting.html" id="paintings-link">Живопис</a>
+                                <a href="Graphics.html" id="graphics-link">Графіка</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="About_me.html" id="about-me-link">Про мене</a></li>
+                                    <!-- Кнопка переключення мови -->
+                <li style="float:right;">
+                    <button onclick="changeLanguage();">
+                        <img src="images/ukraine-flag.png" id="language-flag" alt="UA">
+                    </button>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section id="gallery">
+    <div class="container">
+        <h2 id="gallery-header">Галерея моих робот</h2>
+        <div class="row">
+            <div class="col">
+                <img src="images/Painting/msg661485168-91161.jpg" alt="Робот 1">
+            </div>
+            <div class="col">
+                <img src="images/Painting/msg661485168-91163.jpg" alt="Робот 2">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories">
+    <div class="container">
+        <h2 style="font-family: 'Roboto', sans-serif;" id="categories-header">Категорії</h2>
+        <ul>
+            <li>
+                <a href="Picture.html" id="drawings-category">
+                    <p style="font-family: 'Roboto', sans-serif;">Рисунок</p>
+                </a>
+            </li>
+            <li>
+                <a href="Butter.html" id="oil-category">
+                    <p style="font-family: 'Roboto', sans-serif;">Масло</p>
+                </a>
+            </li>
+            <li>
+                <a href="Painting.html" id="paintings-category">
+                    <p style="font-family: 'Roboto', sans-serif;">Живопис</p>
+                </a>
+            </li>
+            <li>
+                <a href="Graphics.html" id="graphics-category">
+                    <p style="font-family: 'Roboto', sans-serif;">Графика</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+    <script>
+    function changeLanguage() {
+    var language = document.documentElement.lang || 'uk';
+
+    if (language === 'uk') {
+        document.documentElement.lang = 'en';
+
+        document.title = 'My Gallery';
+        document.getElementById('title-header').textContent = 'My Gallery';
+        document.getElementById('home-link').textContent = 'Home';
+        document.getElementById('categories-link').firstChild.nodeValue = 'Categories';
+        document.getElementById('about-me-link').textContent = 'About me';
+        document.getElementById('drawings-link').textContent = 'Drawings';
+        document.getElementById('oil-link').textContent = 'Oil Paintings';
+        document.getElementById('paintings-link').textContent = 'Paintings';
+        document.getElementById('graphics-link').textContent = 'Graphics';
+        document.getElementById('gallery-header').textContent = 'Gallery of my works';
+        document.getElementById('categories-header').textContent = 'Categories';
+        document.getElementById('drawings-category').firstChild.firstChild.nodeValue = 'Drawings';
+        document.getElementById('oil-category').firstChild.firstChild.nodeValue = 'Oil Paintings';
+        document.getElementById('paintings-category').firstChild.firstChild.nodeValue = 'Paintings';
+        document.getElementById('graphics-category').firstChild.firstChild.nodeValue = 'Graphics';
+        document.getElementById('language-flag').src = 'images/united-kingdom-flag.png';
+        document.getElementById('language-flag').alt = 'US';
+
+    } else {
+        document.documentElement.lang = 'uk';
+
+        document.title = 'Моя галерея';
+        document.getElementById('title-header').textContent = 'Моя Галерея';
+        document.getElementById('home-link').textContent = 'Головна';
+        document.getElementById('categories-link').firstChild.nodeValue = 'Категорії';
+        document.getElementById('about-me-link').textContent = 'Про мене';
+        document.getElementById('drawings-link').textContent = 'Малюнки';
+        document.getElementById('oil-link').textContent = 'Олія';
+        document.getElementById('paintings-link').textContent = 'Живопис';
+        document.getElementById('graphics-link').textContent = 'Графіка';
+        document.getElementById('gallery-header').textContent = 'Галерея моих робот';
+        document.getElementById('categories-header').textContent = 'Категорії';
+        document.getElementById('drawings-category').firstChild.firstChild.nodeValue = 'Рисунок';
+        document.getElementById('oil-category').firstChild.firstChild.nodeValue = 'Масло';
+        document.getElementById('paintings-category').firstChild.firstChild.nodeValue = 'Живопис';
+        document.getElementById('graphics-category').firstChild.firstChild.nodeValue = 'Графика';
+        document.getElementById('language-flag').src = 'images/ukraine-flag.png';
+        document.getElementById('language-flag').alt = 'UA';
+    }
+}
+    </script>
+
+<div class="spacer"></div>
+<style>
+.spacer {
+    height: 10px;
+    width: 100%;
+    background-color: transparent;
+}
+</style>
+
+</body>
+</html>

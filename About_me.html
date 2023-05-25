@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя галерея</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Моя галерея</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Головна</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#"><p>Категорії</p></a>
+                            <div class="dropdown-content">
+                                <a href="Picture.html">Малюнки</a>
+                                <a href="Butter.html">Олія</a>
+                                <a href="Painting.html">Живопис</a>
+                                <a href="Graphics.html">Графіка</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="About_me.html">Про мене</a></li>
+                    <li style="float:right;">
+                        <button onclick="changeLanguage();">
+                            <img src="images/ukraine-flag.png" alt="UA">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <p>Мене звати Ангеліна</p>
+                <p>Мені 19 років і я навчаюся в університеті КНУБА</p>
+                <p>Скільки себе пам’ятаю я малюю</p>
+                <p>І хочу, щоб це стало моєю професією.</p>
+                <div class="social-buttons">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/" target="_blank"><img src="images/social/inst.png" alt="Instagram"></a>
+                        <a href="https://telegram.org/" target="_blank"><img src="images/social/teleg.png" alt="Telegram"></a>
+                        <a href="mailto:example@example.com"><img src="images/social/mail.png" alt="Email"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section id="categories">
+        <div class="container">
+            <h2><span>Категорії</span></h2>
+            <ul>
+                <li><a href="Picture.html"><p>Малюнки</p></a></li>
+                <li><a href="Butter.html"><p>Олія</p></a></li>
+                <li><a href="Painting.html"><p>Живопис</p></a></li>
+                <li><a href="Graphics.html"><p>Графіка</p></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function changeLanguage() {
+            var language = document.documentElement.lang || 'uk';
+            var translations = {
+                'uk': {
+                    'title': 'Моя галерея',
+                    'h1': 'Моя галерея',
+                    'home': 'Головна',
+                    'categories': 'Категорії',
+                    'about_me': 'Про мене',
+                    'about_text': [
+                        'Мене звати Ангеліна',
+                        'Мені 19 років і я навчаюся в університеті КНУБА',
+                        'Скільки себе пам’ятаю я малюю',
+                        'І хочу, щоб це стало моєю професією.'
+                    ],
+                    'drawings': 'Малюнки',
+                    'oil': 'Олія',
+                    'paintings': 'Живопис',
+                    'graphics': 'Графіка',
+                    'button_alt': 'UA'
+                },
+                'en': {
+                    'title': 'My Gallery',
+                    'h1': 'My Gallery',
+                    'home': 'Home',
+                    'categories': 'Categories',
+                    'about_me': 'About me',
+                    'about_text': [
+                        'My name is Angelina',
+                        'I am 19 years old and I study at the KNUBA University',
+                        'I have been drawing for as long as I can remember',
+                        'And I want this to become my profession.'
+                    ],
+                    'drawings': 'Drawings',
+                    'oil': 'Oil',
+                    'paintings': 'Paintings',
+                    'graphics': 'Graphics',
+                    'button_alt': 'US'
+                }
+            };
+
+            if (language === 'uk') {
+                language = 'en';
+            } else {
+                language = 'uk';
+            }
+
+            document.documentElement.lang = language;
+            var translation = translations[language];
+
+            document.title = translation.title;
+            document.querySelector('h1').textContent = translation.h1;
+            document.querySelector('a[href="home.html"]').textContent = translation.home;
+            document.querySelector('a[href="#"]').textContent = translation.categories;
+            document.querySelector('a[href="About_me.html"]').textContent = translation.about_me;
+            document.querySelector('#about p:nth-of-type(1)').textContent = translation.about_text[0];
+            document.querySelector('#about p:nth-of-type(2)').textContent = translation.about_text[1];
+            document.querySelector('#about p:nth-of-type(3)').textContent = translation.about_text[2];
+            document.querySelector('#about p:nth-of-type(4)').textContent = translation.about_text[3];
+            document.querySelector('a[href="Picture.html"] p').textContent = translation.drawings;
+            document.querySelector('a[href="Butter.html"] p').textContent = translation.oil;
+            document.querySelector('a[href="Painting.html"] p').textContent = translation.paintings;
+            document.querySelector('a[href="Graphics.html"] p').textContent = translation.graphics;
+            document.querySelector('button img').alt = translation.button_alt;
+            document.querySelector('h2 span').textContent = translation.categories;
+        }
+    </script>
+</body>
+</html>

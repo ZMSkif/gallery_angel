@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя галерея</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .spacer {
+            height: 10px;
+            width: 100%;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1 style="text-align: center;" id="title-header">Моя галерея</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Головна</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#"><p>Категорії</p></a>
+                            <div class="dropdown-content">
+                                <a href="Picture.html">Малюнки</a>
+                                <a href="Butter.html">Олія</a>
+                                <a href="Painting.html">Живопис</a>
+                                <a href="Graphics.html">Графіка</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="About_me.html">Про мене</a></li>
+                    <li style="float:right;">
+                        <button onclick="changeLanguage();">
+                            <img src="images/ukraine-flag.png" alt="UA">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Галерея моих робот</h2>
+            <div class="row">
+                <div class="col">
+                    <img src="images/Graphics/msg661485168-91155.jpg" alt="Робот 1">
+                </div>
+                <div class="col">
+                    <img src="images/Graphics/msg661485168-91156.jpg" alt="Робот 2">
+                </div>
+                <div class="col">
+                    <img src="images/Graphics/msg661485168-91157.jpg" alt="Робот 3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="images/Graphics/msg661485168-91158.jpg" alt="Робот 4">
+                </div>
+                <div class="col">
+                    <img src="images/Graphics/msg661485168-91159.jpg" alt="Робот 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="container">
+            <h2 style="font-family: 'Roboto', sans-serif;">Категорії</h2>
+            <ul>
+                <li>
+                    <a href="Picture.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Рисунок</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Butter.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Масло</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Painting.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Живопис</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Graphics.html">
+                        <p style="font-family: 'Roboto', sans-serif;">Графика</p>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <script>
+function changeLanguage() {
+    var language = document.documentElement.lang || 'uk';
+
+    if (language === 'uk') {
+        document.documentElement.lang = 'en';
+
+        // Replace all Ukrainian text with English text
+        document.getElementsByTagName('title')[0].textContent = 'My Gallery';
+        document.querySelector('h1').textContent = 'My Gallery';
+        document.querySelector('a[href="home.html"]').textContent = 'Home';
+        document.querySelector('a[href="#"]').textContent = 'Categories';
+        document.querySelector('a[href="About_me.html"]').textContent = 'About me';
+        document.querySelector('a[href="Picture.html"] p').textContent = 'Drawings';
+        document.querySelector('a[href="Butter.html"] p').textContent = 'Oil Paintings';
+        document.querySelector('a[href="Painting.html"] p').textContent = 'Paintings';
+        document.querySelector('a[href="Graphics.html"] p').textContent = 'Graphics';
+
+        var h2Elements = document.querySelectorAll('h2');
+        for (var i = 0; i < h2Elements.length; i++) {
+            if (h2Elements[i].textContent === 'Категорії') {
+                h2Elements[i].textContent = 'Categories';
+            } else if (h2Elements[i].textContent === 'Галерея моих робот') {
+                h2Elements[i].textContent = 'My works gallery';
+            }
+        }
+
+        document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Drawings';
+        document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Oil Paintings';
+        document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Paintings';
+        document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Graphics';
+        document.querySelector('button img').src = 'images/united-kingdom-flag.png';
+        document.querySelector('button img').alt = 'US';
+
+    } else {
+        document.documentElement.lang = 'uk';
+
+        // Replace all English text with Ukrainian text
+        document.getElementsByTagName('title')[0].textContent = 'Моя галерея';
+        document.querySelector('h1').textContent = 'Моя Галерея';
+        document.querySelector('a[href="home.html"]').textContent = 'Головна';
+        document.querySelector('a[href="#"]').textContent = 'Категорії';
+        document.querySelector('a[href="About_me.html"]').textContent = 'Про мене';
+        document.querySelector('a[href="Picture.html"] p').textContent = 'Малюнки';
+        document.querySelector('a[href="Butter.html"] p').textContent = 'Олія';
+        document.querySelector('a[href="Painting.html"] p').textContent = 'Живопис';
+        document.querySelector('a[href="Graphics.html"] p').textContent = 'Графіка';
+
+        var h2Elements = document.querySelectorAll('h2');
+        for (var i = 0; i < h2Elements.length; i++) {
+            if (h2Elements[i].textContent === 'Categories') {
+                h2Elements[i].textContent = 'Категорії';
+            } else if (h2Elements[i].textContent === 'My works gallery') {
+                h2Elements[i].textContent = 'Галерея моих робот';
+            }
+        }
+
+        document.querySelector('#categories li:nth-of-type(1) p').textContent = 'Рисунки';
+        document.querySelector('#categories li:nth-of-type(2) p').textContent = 'Масло';
+        document.querySelector('#categories li:nth-of-type(3) p').textContent = 'Живопис';
+        document.querySelector('#categories li:nth-of-type(4) p').textContent = 'Графіка';
+        document.querySelector('button img').src = 'images/ukraine-flag.png';
+        document.querySelector('button img').alt = 'UA';
+    }
+}
+
+    </script>
+</body>
+</html>

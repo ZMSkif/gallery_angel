@@ -1,0 +1,98 @@
+Моя галерея
+Головна
+
+Категорії
+
+Малюнки
+
+Олія
+
+Живопис
+
+Графіка
+
+Про мене
+<section id="gallery">
+    <div class="container">
+        <h2>Галерея моїх робіт</h2>
+        <div class="row">
+            <div class="col">
+                <img src="images/Butter/msg661485168-91150.jpg" alt="Робот 1">
+            </div>
+            <div class="col">
+                <img src="images/Butter/msg661485168-91151.jpg" alt="Робот 2">
+            </div>
+            <div class="col">
+                <img src="images/Butter/msg661485168-91152.jpg" alt="Робот 3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/Butter/msg661485168-91153.jpg" alt="Робот 4">
+            </div>
+            <div class="col">
+                <img src="images/Butter/msg661485168-91154.jpg" alt="Робот 5">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories">
+    <div class="container">
+        <h2><p style="font-family: 'Roboto', sans-serif;">Категорії</p></h2>
+        <ul>
+            <li><a href="Picture.html"><p>Рисунки</p></a></li>
+            <li><a href="Butter.html"><p>Масло</p></a></li>
+            <li><a href="Painting.html"><p>Живопис</p></a></li>
+            <li><a href="Graphics.html"><p>Графіка</p></a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="showcase">
+    <div class="container">
+        <h1>Рада вас бачити на сайті своєї галереї</h1>
+            <p>Тут ви побачите мої роботи та маю надію, що вони надихнуть вас.</p>
+    </div>
+</section>
+
+<section id="author">
+    <div class="container">
+        <h1>Ангеліна Кибалюк</h1>
+        <p>Планую пов'язати життя з творчістю в різних її напрямках та розвивати свої вміння.</p>
+    </div>
+</section>
+
+<script>
+function changeLanguage() {
+    if(document.documentElement.lang == 'uk') {
+        document.querySelector('[data-translate="gallery_heading"]').innerHTML = 'My Work Gallery';
+        document.querySelector('[data-translate="categories_heading"]').innerHTML = 'Categories';
+        document.querySelector('[data-translate="home_link"]').innerHTML = 'Home';
+        document.querySelector('[data-translate="about_me_link"]').innerHTML = 'About me';
+        document.querySelector('[data-translate="pictures_item"]').innerHTML = 'Pictures';
+        document.querySelector('[data-translate="butter_item"]').innerHTML = 'Oil Paintings';
+        document.querySelector('[data-translate="paintings_item"]').innerHTML = 'Paintings';
+        document.querySelector('[data-translate="graphics_item"]').innerHTML = 'Graphics';
+        document.querySelector('[data-translate="showcase_heading"]').innerHTML = 'Welcome to my gallery website';
+        document.querySelector('[data-translate="showcase_text"]').innerHTML = "Here you'll find my work, and I hope it inspires you.";
+        document.querySelector('[data-translate="author_heading"]').innerHTML = 'Angelina Kybalyuk';
+        document.querySelector('[data-translate="author_text"]').innerHTML = "I plan to connect my life with creativity in various directions and develop my skills.";
+        document.documentElement.lang = 'en';
+    } else {
+        document.querySelector('[data-translate="gallery_heading"]').innerHTML = 'Галерея моїх робіт';
+        document.querySelector('[data-translate="categories_heading"]').innerHTML = 'Категорії';
+        document.querySelector('[data-translate="home_link"]').innerHTML = 'Головна';
+        document.querySelector('[data-translate="about_me_link"]').innerHTML = 'Про мене';
+        document.querySelector('[data-translate="pictures_item"]').innerHTML = 'Малюнки';
+        document.querySelector('[data-translate="butter_item"]').innerHTML = 'Олія';
+        document.querySelector('[data-translate="paintings_item"]').innerHTML = 'Живопис';
+        document.querySelector('[data-translate="graphics_item"]').innerHTML = 'Графіка';
+        document.querySelector('[data-translate="showcase_heading"]').innerHTML = 'Рада вас бачити на сайті своєї галереї';
+        document.querySelector('[data-translate="showcase_text"]').innerHTML = 'Тут ви побачите мої роботи та маю надію, що вони надихнуть вас.';
+        document.querySelector('[data-translate="author_heading"]').innerHTML = 'Ангеліна Кибалюк';
+        document.querySelector('[data-translate="author_text"]').innerHTML = "Планую пов'язати життя з творчістю в різних її напрямках та розвивати свої вміння.";
+        document.documentElement.lang = 'uk';
+    }
+}
+</script>
